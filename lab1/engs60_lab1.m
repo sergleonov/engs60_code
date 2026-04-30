@@ -37,7 +37,6 @@ ch21 = data.Var3;
 
 ch12 = data2.Var2;
 ch22 = data2.Var3;
-ch22 = ch22 - ch22(1); % shift ch22 down
 
 ch13 = data3.Var2;
 ch23 = data3.Var3;
@@ -116,7 +115,7 @@ semilogy(fit_v, y, LineWidth=2.4, LineStyle="--");
 xlabel("Voltage (V)")
 ylabel("Current (A)")
 title("Signal Diode, Forward Voltage (log scale)")
-legend("1 V/mA", "10 V/mA", "10 V/mA, Ch2: 100 mV/div", "Fit (n=1.86, I_0 = 2.68e-9)", 'Location', 'southeast')
+legend("1 V/mA", "10 V/mA", "10 V/mA, Ch2: 100 mV/div", "Fit (n=1.88, I_0 = 3.10e-9)", 'Location', 'southeast')
 set(gca , 'FontSize', 20);
 saveas(gcf, 'log_IV_part1.png');
 
