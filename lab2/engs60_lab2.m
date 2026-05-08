@@ -108,9 +108,9 @@ Area = .125 * .063 % m^2
 lux_bright = 16300; % lux
 lux_half = 8020; % lux
 
-bulb_eff = 100; % bulb efficiency
-optical_power_bright = Area * lux_bright / bulb_eff
-optical_power_half = Area * lux_half / bulb_eff
+bulb_factor = 10/683 % W/m^2
+optical_power_bright = Area * lux_bright * bulb_factor
+optical_power_half = Area * lux_half * bulb_factor
 
 % compute power ratio (converting power to W from mW)
 P_eff_bright = (P_max_val_bright * 1e-3) / optical_power_bright
